@@ -1,0 +1,15 @@
+create database github_analyzer
+use github_analyzer
+
+create table github_profiles (
+	id int auto_increment primary key,
+    username varchar(100) unique,
+    name varchar(250),
+    followers int,
+    followings int,
+    public_repos int,
+    total_stars int,
+    total_forks int,
+    top_repository varchar(255),
+    created_at timestamp default current_timestamp
+);
